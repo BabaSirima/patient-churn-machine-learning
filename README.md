@@ -1,0 +1,248 @@
+# Patient Churn Prediction Using Machine Learning
+
+## Overview
+
+Patient churn can reduce continuity of care, weaken patient-provider relationships, and create operational and financial challenges for healthcare organizations.
+
+This project develops an end-to-end machine learning workflow to identify patients at risk of churn and investigate the patient characteristics most associated with disengagement. The analysis combines exploratory data analysis, statistical testing, feature engineering, class-imbalance handling, cross-validation, model comparison, and model interpretation.
+
+## Business Problem
+
+Healthcare organizations benefit from identifying patients who may disengage before churn occurs. A reliable churn-risk model can support targeted retention strategies, improve continuity of care, and help organizations focus outreach resources on patients who may need additional support.
+
+The goal of this project is not only to predict churn, but also to understand the factors associated with it and translate those findings into actionable business insights.
+
+## Project Objectives
+
+- Audit and prepare the patient churn dataset.
+- Explore churn patterns using descriptive and inferential statistics.
+- Identify statistically meaningful patient-level factors associated with churn.
+- Evaluate relationships among numerical variables using correlation analysis.
+- Build and compare multiple classification algorithms.
+- Address class imbalance using SMOTE inside the machine-learning pipeline.
+- Evaluate the selected model on an untouched test set.
+- Interpret Random Forest feature importance and compare it with EDA findings.
+- Translate analytical findings into patient-retention recommendations.
+
+## Dataset
+
+The analysis uses a patient churn dataset containing **2,000 patient records and 21 variables**.
+
+The target variable is:
+
+- `churned = 0` — Retained patient
+- `churned = 1` — Churned patient
+
+Target distribution:
+
+- Retained: **633 patients (31.65%)**
+- Churned: **1,367 patients (68.35%)**
+
+The dataset is imbalanced, so SMOTE is applied inside the training pipeline rather than before the train/test split.
+
+> Dataset source: Kaggle. Add the specific dataset URL here before publishing if required by the dataset license.
+
+## Analytical Workflow
+
+### 1. Data Quality Assessment
+The dataset is inspected for:
+
+- Data types
+- Missing values
+- Duplicate records
+- Distribution of the target variable
+- Potential outliers
+
+### 2. Exploratory Data Analysis
+
+The analysis investigates distributions and patterns across numerical and categorical patient characteristics.
+
+Statistical techniques include:
+
+- Welch's independent-samples t-test
+- Chi-square tests of independence
+- Pearson correlation analysis
+
+The EDA suggests that patient churn is more strongly associated with patient experience, engagement, utilization, accessibility, and financial characteristics than with broad demographic categories.
+
+### 3. Feature Engineering
+
+The workflow:
+
+- Removes the patient identifier from predictive features.
+- Converts the interaction date into model-ready temporal features.
+- Standardizes numerical variables.
+- One-hot encodes categorical variables.
+- Uses SMOTE inside the model pipeline to reduce leakage risk.
+
+### 4. Machine Learning Models
+
+Five classification algorithms are evaluated using **5-fold stratified cross-validation**:
+
+1. Logistic Regression
+2. Decision Tree
+3. Random Forest
+4. K-Nearest Neighbors
+5. XGBoost
+
+## Model Comparison
+
+| Model | Accuracy | Precision | Sensitivity | F1 Score | ROC AUC |
+|---|---:|---:|---:|---:|---:|
+| Random Forest | 0.661 | 0.695 | 0.900 | **0.784** | 0.600 |
+| XGBoost | 0.631 | 0.701 | 0.802 | 0.748 | 0.567 |
+| Logistic Regression | 0.604 | **0.763** | 0.615 | 0.680 | **0.632** |
+| Decision Tree | 0.554 | 0.686 | 0.643 | 0.663 | 0.503 |
+| KNN | 0.477 | 0.711 | 0.396 | 0.508 | 0.531 |
+
+Random Forest was selected because it achieved the strongest F1 score and high sensitivity during cross-validation.
+
+## Final Random Forest Performance
+
+On the untouched test set, the selected Random Forest produced approximately:
+
+| Metric | Score |
+|---|---:|
+| Accuracy | 0.662 |
+| Precision | 0.684 |
+| Sensitivity / Recall | **0.938** |
+| Specificity | **0.071** |
+| F1 Score | **0.791** |
+| ROC AUC | 0.579 |
+
+The model successfully identifies most churned patients, but its low specificity indicates a high false-positive rate. For that reason, the current model is best viewed as a **high-recall churn-screening model**, not a production-ready autonomous decision system.
+
+## Random Forest Feature Importance
+
+The most influential Random Forest features include:
+
+| Rank | Feature | Importance |
+|---:|---|---:|
+| 1 | Overall satisfaction | 0.0638 |
+| 2 | Distance to facility | 0.0607 |
+| 3 | Tenure | 0.0596 |
+| 4 | Wait-time satisfaction | 0.0595 |
+| 5 | Average out-of-pocket cost | 0.0591 |
+| 6 | Age | 0.0540 |
+| 7 | Days since last visit | 0.0516 |
+| 8 | Staff satisfaction | 0.0488 |
+| 9 | Provider rating | 0.0474 |
+| 10 | Interaction month | 0.0441 |
+
+Several variables identified during exploratory and statistical analysis also appear among the model's most important predictors. This agreement strengthens the evidence that satisfaction, access, recency of care, utilization, and financial experience contribute useful predictive information.
+
+> Random Forest feature importance measures predictive contribution, not statistical significance or causality.
+
+## Business Insights
+
+The analysis suggests several retention opportunities:
+
+- **Prioritize low-satisfaction patients:** Overall satisfaction produced the strongest univariate statistical signal and ranked highly in the Random Forest.
+- **Re-engage inactive patients:** Longer time since the last visit was associated with churn.
+- **Improve the waiting experience:** Wait-time satisfaction contributes both statistical and predictive information.
+- **Monitor missed appointments:** Missed visits can support early-warning segmentation.
+- **Investigate access barriers:** Distance to the facility may indicate practical barriers to continued care.
+- **Assess financial friction:** Out-of-pocket cost contributes predictive information.
+- **Use engagement signals:** Portal usage and interaction characteristics may help identify disengagement patterns.
+
+These findings are observational and should be treated as hypotheses for operational testing rather than causal conclusions.
+
+## Tools and Technologies
+
+- Python
+- Pandas
+- NumPy
+- SciPy
+- Matplotlib
+- Scikit-learn
+- Imbalanced-learn
+- XGBoost
+- Jupyter Notebook
+
+## Repository Structure
+
+```text
+patient-churn-prediction-ml/
+│
+├── README.md
+├── requirements.txt
+├── .gitignore
+│
+├── notebooks/
+│   └── patient_churn_machine_learning.ipynb
+│
+├── data/
+│   └── README.md
+│
+├── images/
+│   └── .gitkeep
+│
+└── reports/
+    └── patient_churn_machine_learning.html
+```
+
+## How to Run the Project
+
+1. Clone the repository:
+
+```bash
+git clone YOUR_REPOSITORY_URL
+cd patient-churn-prediction-ml
+```
+
+2. Create and activate a virtual environment.
+
+Windows:
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+```
+
+macOS/Linux:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+3. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Place the dataset in the `data/` directory, if its license allows local redistribution.
+
+5. Update the notebook's dataset path if necessary and run:
+
+```bash
+jupyter notebook
+```
+
+## Limitations and Future Improvements
+
+Future improvements include:
+
+- Random Forest and XGBoost hyperparameter tuning
+- Classification-threshold optimization
+- Precision-Recall AUC evaluation
+- Probability calibration
+- Permutation importance or SHAP explainability
+- Class weighting as an alternative to SMOTE
+- Temporal validation
+- Fairness diagnostics
+- Reusable inference pipeline or API deployment
+
+## Key Takeaway
+
+This project demonstrates an end-to-end machine-learning workflow while emphasizing an important practical lesson: the strongest model is not determined by one metric alone.
+
+Random Forest achieved strong churn sensitivity and F1 performance, but its weak specificity highlights the need to evaluate predictive models according to the real-world costs of false positives and false negatives.
+
+## Author
+
+**Your Name**  
+Data Science | Machine Learning | Predictive Analytics
+
+Add your LinkedIn, GitHub profile, and portfolio links here.
