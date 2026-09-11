@@ -26,7 +26,7 @@ The goal of this project is not only to predict churn, but also to understand th
 
 ## Dataset
 
-The analysis uses a patient churn dataset containing **2,000 patient records and 21 variables**.
+The analysis uses a patient churn dataset from Kaggle containing **2,000 patient records and 21 variables**.
 
 The target variable is:
 
@@ -38,7 +38,11 @@ Target distribution:
 - Retained: **633 patients (31.65%)**
 - Churned: **1,367 patients (68.35%)**
 
-The dataset is imbalanced, so SMOTE is applied inside the training pipeline rather than before the train/test split.
+<p align="center">
+  <img src="image/churn_distribution.png" width="700">
+</p>
+
+The target distribution shows a clear class imbalance, with **68.35% of patients classified as churned** compared with **31.65% retained**. This imbalance motivated the use of SMOTE within the machine-learning pipeline while preserving the untouched test set for final evaluation.
 
 > Dataset source: Kaggle. Add the specific dataset URL here before publishing if required by the dataset license.
 
