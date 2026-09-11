@@ -158,13 +158,13 @@ Several of these variables were also identified during exploratory and statistic
 
 The analysis suggests several retention opportunities:
 
-- **Prioritize low-satisfaction patients:** Overall satisfaction produced the strongest univariate statistical signal and ranked highly in the Random Forest.
-- **Re-engage inactive patients:** Longer time since the last visit was associated with churn.
-- **Improve the waiting experience:** Wait-time satisfaction contributes both statistical and predictive information.
-- **Monitor missed appointments:** Missed visits can support early-warning segmentation.
-- **Investigate access barriers:** Distance to the facility may indicate practical barriers to continued care.
-- **Assess financial friction:** Out-of-pocket cost contributes predictive information.
-- **Use engagement signals:** Portal usage and interaction characteristics may help identify disengagement patterns.
+- Prioritize low-satisfaction patients: Overall satisfaction produced the strongest univariate statistical signal and ranked highly in the Random Forest.
+- Re-engage inactive patients: Longer time since the last visit was associated with churn.
+- Improve the waiting experience: Wait-time satisfaction contributes both statistical and predictive information.
+- Monitor missed appointments: Missed visits can support early-warning segmentation.
+- Investigate access barriers: Distance to the facility may indicate practical barriers to continued care.
+- Assess financial friction: Out-of-pocket cost contributes predictive information.
+- Use engagement signals: Portal usage and interaction characteristics may help identify disengagement patterns.
 
 These findings are observational and should be treated as hypotheses for operational testing rather than causal conclusions.
 
@@ -263,7 +263,7 @@ Random Forest achieved strong churn sensitivity and F1 performance, but its weak
 
 ## Author
 
-**Your Name**  
+**Baba Sirima**  
 Data Science | Machine Learning | Predictive Analytics
 
-Add your LinkedIn, GitHub profile, and portfolio links here.
+
