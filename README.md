@@ -168,18 +168,6 @@ The analysis suggests several retention opportunities:
 
 These findings are observational and should be treated as hypotheses for operational testing rather than causal conclusions.
 
-## Tools and Technologies
-
-- Python
-- Pandas
-- NumPy
-- SciPy
-- Matplotlib
-- Scikit-learn
-- Imbalanced-learn
-- XGBoost
-- Jupyter Notebook
-
 ## Repository Structure
 
 ```text
@@ -265,5 +253,39 @@ Random Forest achieved strong churn sensitivity and F1 performance, but its weak
 
 **Baba Sirima**  
 Data Science | Machine Learning | Predictive Analytics
+
+## Skills Demonstrated
+
+This project demonstrates an end-to-end data science workflow, from exploratory analysis and statistical testing to machine learning, model evaluation, interpretation, and business recommendations.
+
+- **Exploratory Data Analysis (EDA):** Investigated patient characteristics, churn distribution, numerical relationships, and potential churn drivers.
+- **Data Preprocessing & Feature Engineering:** Prepared numerical and categorical variables, engineered date-based features, and constructed reproducible preprocessing pipelines.
+- **Statistical Analysis:** Applied independent-sample t-tests and correlation analysis to identify variables associated with patient churn.
+- **Imbalanced Classification:** Addressed class imbalance using SMOTE within the training pipeline while keeping evaluation data untouched.
+- **Machine Learning:** Developed and compared Logistic Regression, Decision Tree, Random Forest, K-Nearest Neighbors (KNN), and XGBoost classifiers.
+- **Model Validation:** Used stratified train/test splitting and 5-fold cross-validation to evaluate model generalization.
+- **Model Evaluation:** Compared models using Accuracy, Precision, Sensitivity (Recall), Specificity, F1 Score, and ROC AUC.
+- **Model Interpretation:** Analyzed Random Forest feature importance to identify influential predictors of patient churn.
+- **Business Analytics:** Translated statistical and machine-learning results into actionable patient-retention insights.
+- **Reproducible Data Science:** Organized the analysis using Python pipelines, structured notebook sections, reusable code, and GitHub documentation.
+
+
+## Technical Skills & Tools
+
+| Category | Technologies / Methods |
+|---|---|
+| **Programming** | Python |
+| **Data Manipulation** | Pandas, NumPy |
+| **Data Visualization** | Matplotlib |
+| **Statistical Analysis** | SciPy, Correlation Analysis, Independent-Sample T-Tests |
+| **Machine Learning** | Scikit-learn, XGBoost |
+| **Classification Algorithms** | Logistic Regression, Decision Tree, Random Forest, KNN, XGBoost |
+| **Imbalanced Learning** | SMOTE, Imbalanced-learn |
+| **Model Validation** | Stratified Train/Test Split, 5-Fold Cross-Validation |
+| **Model Evaluation** | Accuracy, Precision, Recall/Sensitivity, Specificity, F1 Score, ROC AUC, Confusion Matrix |
+| **Feature Engineering** | Date Feature Extraction, Categorical Encoding, Feature Scaling |
+| **Model Explainability** | Random Forest Feature Importance |
+| **Development Environment** | Jupyter Notebook |
+| **Version Control & Portfolio** | Git, GitHub |
 
 
