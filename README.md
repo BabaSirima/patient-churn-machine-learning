@@ -273,18 +273,18 @@ This project demonstrates an end-to-end data science workflow, from exploratory 
 ## Technical Skills & Tools
 
 
- **Programming**: Python 
- **Data Manipulation**: Pandas, NumPy 
- **Data Visualization**: Matplotlib 
- **Statistical Analysis**:  SciPy, Correlation Analysis, Independent-Sample T-Tests
- **Machine Learning**: Scikit-learn
- **Classification Algorithms**: Logistic Regression, Decision Tree, Random Forest, KNN, XGBoost 
-**Imbalanced Learning**: SMOTE, Imbalanced-learn 
-**Model Validation**: Stratified Train/Test Split, 5-Fold Cross-Validation 
-**Model Evaluation** : Accuracy, Precision, Recall/Sensitivity, Specificity, F1 Score, ROC AUC, Confusion Matrix 
-**Feature Engineering** : Date Feature Extraction, Categorical Encoding, Feature Scaling 
-**Model Explainability**: Random Forest Feature Importance
-**Development Environment**: Jupyter Notebook 
-**Version Control & Portfolio**: Git, GitHub 
+ _**Programming**: Python 
+ _**Data Manipulation**: Pandas, NumPy 
+ _**Data Visualization**: Matplotlib 
+ _**Statistical Analysis**:  SciPy, Correlation Analysis, Independent-Sample T-Tests
+ _**Machine Learning**: Scikit-learn
+ _**Classification Algorithms**: Logistic Regression, Decision Tree, Random Forest, KNN, XGBoost 
+_**Imbalanced Learning**: SMOTE, Imbalanced-learn 
+_**Model Validation**: Stratified Train/Test Split, 5-Fold Cross-Validation 
+_**Model Evaluation**: Accuracy, Precision, Recall/Sensitivity, Specificity, F1 Score, ROC AUC, Confusion Matrix 
+_**Feature Engineering**: Date Feature Extraction, Categorical Encoding, Feature Scaling 
+_**Model Explainability**: Random Forest Feature Importance
+_**Development Environment**: Jupyter Notebook 
+_**Version Control & Portfolio**: Git, GitHub 
 
 
