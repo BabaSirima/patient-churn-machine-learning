@@ -44,8 +44,7 @@ Target distribution:
 
 The target distribution shows a clear class imbalance, with **68.35% of patients classified as churned** compared with **31.65% retained**. This imbalance motivated the use of SMOTE within the machine-learning pipeline while preserving the untouched test set for final evaluation.
 
-> Dataset source: [Kaggle. Add the specific dataset URL here before publishing if required by the dataset license.
-](https://www.kaggle.com/datasets/nudratabbas/patient-churn-prediction-dataset-for-healthcare)
+> Dataset source: [patient-churn-prediction-dataset-for-healthcare](https://www.kaggle.com/datasets/nudratabbas/patient-churn-prediction-dataset-for-healthcare)
 ## Analytical Workflow
 
 ### 1. Data Quality Assessment
