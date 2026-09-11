@@ -68,6 +68,14 @@ Statistical techniques include:
 
 The EDA suggests that patient churn is more strongly associated with patient experience, engagement, utilization, accessibility, and financial characteristics than with broad demographic categories.
 
+#### Correlation with Patient Churn
+
+<p align="center">
+  <img src="image/correlation_with_churn.png" width="750">
+</p>
+
+The correlation analysis indicates that no single numerical feature has a strong linear relationship with patient churn. Instead, churn appears to reflect the combined influence of multiple patient characteristics. This supports the use of multivariable machine-learning models capable of evaluating several predictors simultaneously.
+
 ### 3. Feature Engineering
 
 The workflow:
