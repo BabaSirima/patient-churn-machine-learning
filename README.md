@@ -272,20 +272,19 @@ This project demonstrates an end-to-end data science workflow, from exploratory 
 
 ## Technical Skills & Tools
 
-| Category | Technologies / Methods |
-|---|---|
-| **Programming** | Python |
-| **Data Manipulation** | Pandas, NumPy |
-| **Data Visualization** | Matplotlib |
-| **Statistical Analysis** | SciPy, Correlation Analysis, Independent-Sample T-Tests |
-| **Machine Learning** | Scikit-learn, XGBoost |
-| **Classification Algorithms** | Logistic Regression, Decision Tree, Random Forest, KNN, XGBoost |
-| **Imbalanced Learning** | SMOTE, Imbalanced-learn |
-| **Model Validation** | Stratified Train/Test Split, 5-Fold Cross-Validation |
-| **Model Evaluation** | Accuracy, Precision, Recall/Sensitivity, Specificity, F1 Score, ROC AUC, Confusion Matrix |
-| **Feature Engineering** | Date Feature Extraction, Categorical Encoding, Feature Scaling |
-| **Model Explainability** | Random Forest Feature Importance |
-| **Development Environment** | Jupyter Notebook |
-| **Version Control & Portfolio** | Git, GitHub |
+
+ **Programming**: Python 
+ **Data Manipulation**: Pandas, NumPy 
+ **Data Visualization**: Matplotlib 
+ **Statistical Analysis**:  SciPy, Correlation Analysis, Independent-Sample T-Tests
+ **Machine Learning**: Scikit-learn
+ **Classification Algorithms**: Logistic Regression, Decision Tree, Random Forest, KNN, XGBoost 
+**Imbalanced Learning**: SMOTE, Imbalanced-learn 
+**Model Validation**: Stratified Train/Test Split, 5-Fold Cross-Validation 
+**Model Evaluation** : Accuracy, Precision, Recall/Sensitivity, Specificity, F1 Score, ROC AUC, Confusion Matrix 
+**Feature Engineering** : Date Feature Extraction, Categorical Encoding, Feature Scaling 
+**Model Explainability**: Random Forest Feature Importance
+**Development Environment**: Jupyter Notebook 
+**Version Control & Portfolio**: Git, GitHub 
 
 
