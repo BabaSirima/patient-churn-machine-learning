@@ -140,9 +140,19 @@ The most influential Random Forest features include:
 | 9 | Provider rating | 0.0474 |
 | 10 | Interaction month | 0.0441 |
 
-Several variables identified during exploratory and statistical analysis also appear among the model's most important predictors. This agreement strengthens the evidence that satisfaction, access, recency of care, utilization, and financial experience contribute useful predictive information.
 
-> Random Forest feature importance measures predictive contribution, not statistical significance or causality.
+### Top Predictive Features
+
+<p align="center">
+  <img src="image/random_forest_feature_importance.png" width="750">
+</p>
+
+The Random Forest analysis highlights overall satisfaction, distance to the facility, tenure, wait-time satisfaction, average out-of-pocket cost, age, and days since the last visit among the most influential predictors of churn.
+
+Several of these variables were also identified during exploratory and statistical analysis. This overlap strengthens the evidence that patient experience, access, recency of care, and financial factors provide meaningful information for identifying patients at risk of churn.
+
+ Random Forest feature importance measures a variable's contribution to prediction within the fitted model. It should not be interpreted as statistical significance or evidence of causality.
+
 
 ## Business Insights
 
